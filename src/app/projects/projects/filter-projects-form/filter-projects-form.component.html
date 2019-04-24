@@ -1,0 +1,11 @@
+<form>
+  <fieldset>
+    <legend>Filter By</legend>
+    <section>
+      <label for="name">Name</label>
+      <input name="name" type="text" [(ngModel)]="filtertxt" placeholder="Project name" />
+    </section>
+
+  </fieldset>
+  <input value="Send" type="button" (click)="sendFilter()" />
+</form>

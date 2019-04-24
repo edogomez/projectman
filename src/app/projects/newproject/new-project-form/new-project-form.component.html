@@ -1,0 +1,11 @@
+<form>
+  <fieldset>
+    <legend>New Project</legend>
+    <section>
+      <label for="name">Name</label>
+      <input name="name" type="text" [(ngModel)]="projectName" placeholder="Project name" />
+    </section>
+
+  </fieldset>
+  <input value="Save" type="submit" (click)="sendProject()" />
+</form>
