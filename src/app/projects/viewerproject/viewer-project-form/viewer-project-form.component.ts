@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Project } from '../../models/project.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-viewer-project-form',
@@ -7,7 +8,7 @@ import { Project } from '../../models/project.model';
   styles: []
 })
 export class ViewerProjectFormComponent implements OnInit {
-  @Input() public project: Project;
+  @Input() public projects$: Observable<any>;
   constructor() { }
 
   ngOnInit() {

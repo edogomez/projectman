@@ -5,11 +5,12 @@ import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, MainComponent, FooterComponent],
   imports: [
-    CommonModule, RouterModule
+    CommonModule, RouterModule, HttpClientModule
   ],
   exports:[LayoutComponent]
 })
