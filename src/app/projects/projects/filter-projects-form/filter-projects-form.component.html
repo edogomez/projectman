@@ -1,9 +1,9 @@
-<form>
+<form [formGroup]="formGroup">
   <fieldset>
     <legend>Filter By</legend>
     <section>
       <label for="name">Name</label>
-      <input name="name" type="text" [(ngModel)]="filtertxt" placeholder="Project name" />
+      <input name="name" formControlName="filtertxt" type="text" placeholder="Project name" />
     </section>
 
   </fieldset>

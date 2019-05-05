@@ -5,13 +5,21 @@ import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorService } from './http-interceptor.service';
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, MainComponent, FooterComponent],
   imports: [
     CommonModule, RouterModule, HttpClientModule
   ],
-  exports:[LayoutComponent]
+  exports:[LayoutComponent],
+  providers:[
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
+  ]
 })
 export class CoreModule { }

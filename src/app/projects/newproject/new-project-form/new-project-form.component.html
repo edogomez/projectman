@@ -1,9 +1,9 @@
-<form>
+<form [formGroup]="formNewGroup">
   <fieldset>
     <legend>New Project</legend>
     <section>
       <label for="name">Name</label>
-      <input name="name" type="text" [(ngModel)]="projectName" placeholder="Project name" />
+      <input name="name" formControlName="projectName" type="text" placeholder="Project name" />
     </section>
 
   </fieldset>
