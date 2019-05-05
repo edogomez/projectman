@@ -1,11 +1,10 @@
 <form [formGroup]="formNewGroup">
   <fieldset>
     <legend>New Project</legend>
-    <section>
-      <label for="name">Name</label>
-      <input name="name" formControlName="projectName" type="text" placeholder="Project name" />
-    </section>
+    <mat-form-field class="">
+      <input matInput name="name" formControlName="projectName" placeholder="Project name" value="">
+    </mat-form-field><br>
 
   </fieldset>
-  <input value="Save" type="submit" (click)="sendProject()" />
+  <button mat-button (click)="sendProject()">Save</button>
 </form>

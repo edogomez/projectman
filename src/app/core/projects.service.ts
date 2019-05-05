@@ -4,6 +4,7 @@ import { Project } from '../projects/models/project.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, share } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ProjectsService {
   public projects: Project[] = [];
   private urlapi = 'https://api-base.herokuapp.com/api/pub/projects';
   public projects$: Observable<any>;
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private router: Router) {
     this.projects$ = this.httpClient.get(this.urlapi).pipe(share()).pipe(map(this.formatData));
 
   }
@@ -27,7 +28,7 @@ export class ProjectsService {
 
   public addProject(project: Project){
 
-    this.httpClient.post(this.urlapi, project).subscribe();
+    this.httpClient.post(this.urlapi, project).subscribe(response => { this.router.navigate(['projects'])});
     // this.projects.push(project);
   }
   public getProject(id: number): Project {

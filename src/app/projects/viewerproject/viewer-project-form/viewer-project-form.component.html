@@ -1,7 +1,9 @@
+<div style="text-align:center">
 <h2>Los datos del proyecto son</h2>
 <div *ngFor="let project of projects$ | async ">
 <div>
   Id: {{ project.id}}
 </div>
 <div>Name: {{ project.name }}</div>
+</div>
 </div>

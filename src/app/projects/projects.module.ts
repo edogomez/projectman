@@ -10,14 +10,24 @@ import { FilterProjectsFormComponent } from './projects/filter-projects-form/fil
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { NewProjectFormComponent } from './newproject/new-project-form/new-project-form.component';
 import { ViewerProjectFormComponent } from './viewerproject/viewer-project-form/viewer-project-form.component';
+import { MatInputModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
-  declarations: [ProjectsComponent, ViewerprojectComponent, NewprojectComponent, FilterProjectsFormComponent, ProjectsListComponent, NewProjectFormComponent, ViewerProjectFormComponent],
+  declarations: [ProjectsComponent,
+    ViewerprojectComponent,
+    NewprojectComponent,
+    FilterProjectsFormComponent,
+    ProjectsListComponent,
+    NewProjectFormComponent,
+    ViewerProjectFormComponent
+  ],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule
   ]
 })
 export class ProjectsModule { }

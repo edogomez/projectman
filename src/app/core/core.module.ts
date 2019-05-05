@@ -7,14 +7,16 @@ import { LayoutComponent } from './layout/layout.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './http-interceptor.service';
+import { MatToolbarModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, MainComponent, FooterComponent],
   imports: [
-    CommonModule, RouterModule, HttpClientModule
+    CommonModule, RouterModule, HttpClientModule, MatToolbarModule
   ],
   exports:[LayoutComponent],
-  providers:[
+  providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpInterceptorService,

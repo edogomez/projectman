@@ -1,11 +1,6 @@
-<form [formGroup]="formGroup">
-  <fieldset>
-    <legend>Filter By</legend>
-    <section>
-      <label for="name">Name</label>
-      <input name="name" formControlName="filtertxt" type="text" placeholder="Project name" />
-    </section>
-
-  </fieldset>
-  <input value="Send" type="button" (click)="sendFilter()" />
+<form [formGroup]="formGroup"  class="border pb-2">
+  <mat-form-field class="">
+    <input matInput placeholder="Filter by name" name="name" formControlName="filtertxt" value="">
+  </mat-form-field><br>
+  <button mat-button (click)="sendFilter()">Send</button><br>
 </form>

@@ -1,2 +1,4 @@
-<app-filter-projects-form (filter)="onFilter($event)" ></app-filter-projects-form>
-<app-projects-list [projects]="projects" [filteredvalues]="filteredvalues" [filteredvalues$]="filteredvalues$"></app-projects-list>
+<div style="text-align:center">
+  <app-filter-projects-form (filter)="onFilter($event)" ></app-filter-projects-form>
+  <app-projects-list [projects]="projects" [filteredvalues]="filteredvalues" [filteredvalues$]="filteredvalues$"></app-projects-list>
+</div>

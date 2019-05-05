@@ -1,2 +1,8 @@
-<h5> projectman footer</h5>
-<div *ngFor="let message of messages$ | async as messages; last as isLast"><span *ngIf="isLast">Num. llamadas api: {{messages.length}} <br>Ultima llamada api: {{message}}</span></div>
+<footer class="footer">
+  <div class="container">
+    <span>projectman footer</span>
+    <div *ngFor="let message of messages$ | async as messages; last as isLast"><span *ngIf="isLast">Num. llamadas api:
+        {{messages.length}} <br>Ultima llamada api: {{message}}</span></div>
+
+  </div>
+</footer>

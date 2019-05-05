@@ -1,6 +1,16 @@
-<h1>{{ title }}</h1>
-<ul>
-  <li><a routerLink="/" routerLinkActive="router-link-active">Home</a></li>
-  <li><a  routerLink="projects" routerLinkActive="router-link-active">Proyectos</a></li>
-  <li><a  routerLink="projects/new" routerLinkActive="router-link-active">Nuevo Proyecto</a></li>
-</ul>
+<mat-toolbar class="mat-menu-toolbar">
+  <div layout="row">
+    <div>
+      <h2 class="mat-toolbar-tools">ProjectMan</h2>
+    </div>
+  </div>
+</mat-toolbar>
+<nav class="nav d-flex justify-content-between">
+  <div class="container-fluid">
+    <a class="p-2 text-muted" routerLink="/" routerLinkActive="router-link-active">Home</a>
+    <a class="p-2 text-muted" routerLink="projects" routerLinkActive="router-link-active">Proyectos</a>
+    <a class="p-2 text-muted" routerLink="projects/new" routerLinkActive="router-link-active">Nuevo Proyecto</a>
+
+  </div>
+</nav>
+<br>
